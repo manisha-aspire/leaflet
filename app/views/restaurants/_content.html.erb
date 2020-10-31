@@ -1,0 +1,55 @@
+<div class="listing-image" style="background-image: url(<%= url_for(restaurant.image) %>);">
+	<%= image_tag url_for(restaurant.image) %>
+</div>
+<div class="listing-text">
+	<div class="listing-favourite favourite favourite__off js-overlay-open" data-overlay="login"><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8.5 14.5694L8.02511 14.0836L8.0037 14.0617L7.981 14.0412C5.75454 12.0263 3.99236 10.4081 2.77706 8.89542C1.57378 7.39772 1 6.11493 1 4.78261C1 2.61767 2.61362 1 4.675 1C5.81251 1 6.97831 1.55533 7.72943 2.46344L8.5 3.39508L9.27057 2.46344C10.0217 1.55533 11.1875 1 12.325 1C14.3864 1 16 2.61767 16 4.78261C16 6.11493 15.4262 7.39772 14.2229 8.89542C13.0076 10.4081 11.2455 12.0263 9.019 14.0412L8.9963 14.0617L8.97489 14.0836L8.5 14.5694Z"></path></svg></div>
+
+	<h3 class="listing-title"><%= restaurant.title %></h3>
+	<div class="listing-rating-title">Tripadvisor Traveller Rating</div>
+</div>
+
+<style type="text/css">
+	.listing-rating-title{
+		width: 100%;
+		display: flex;
+	}
+	.listing-image {
+    padding-bottom: 38.35616438%;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    overflow: hidden;
+  }
+  .listing-image img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+	}
+	.listing-text {
+    padding: 15px;
+	}
+	.listing-favourite {
+    float: right;
+    width: 47px;
+    height: 47px;
+    padding: 15px;
+    margin-right: -15px;
+    margin-top: -15px;
+    position: relative;
+	}
+	.listing-text .listing-title {
+    font-size: 18px;
+    margin: 0;
+	}
+	.leaflet-popup-content-wrapper {
+		padding: 0;
+	}
+	.leaflet-popup-content {
+    margin: 0;
+	}
+</style>
